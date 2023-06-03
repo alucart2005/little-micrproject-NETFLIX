@@ -35,6 +35,7 @@ header .navigation li a {
   text-decoration: none;
   font-weight: 500;
   letter-spacing: 1px;
+  margin-left: 15px;
 }
 header .navigation li:hover a {
   color: #de0611;
@@ -66,4 +67,70 @@ header .search input::-moz-placeholder {
 }
 header .search input::placeholder {
   color: #fff;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.banner .shadowImg {
+  position: absolute;
+  background: linear-gradient(45deg, black 10%, transparent);
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+.banner .content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+}
+.banner .content .movieTitle {
+  max-width: 250px;
+}
+.banner .content h4 {
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 500;
+}
+.banner .content h4 span {
+  padding: 0 10px;
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+.banner .content h4 span:first-child {
+  padding-left: 0;
+}
+.banner .content h4 span:last-child {
+  border: none;
+}
+.banner .content h4 span i {
+  background-color: #de0611;
+  color: #fff;
+  padding: 0 8px;
+  display: inline-block;
+  border-radius: 10%;
+  font-style: normal;
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 20px;
+  }
+  .search {
+    width: calc(100% - 20px);
+  }
 }/*# sourceMappingURL=styles.css.map */
