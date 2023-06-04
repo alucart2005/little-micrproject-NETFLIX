@@ -5,6 +5,28 @@
   font-family: sans-serif;
 }
 
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+
 body {
   background: #000;
 }
@@ -51,7 +73,7 @@ header .search input {
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 0 5px;
+  padding: 0 10px 0 40px;
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 3px;
   outline: none;
@@ -67,6 +89,14 @@ header .search input::-moz-placeholder {
 }
 header .search input::placeholder {
   color: #fff;
+}
+header .search .btnsearch {
+  position: relative;
+  color: white;
+  border: none;
+  background: transparent;
+  top: 25%;
+  left: 3%;
 }
 
 .banner {
