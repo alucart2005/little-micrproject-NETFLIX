@@ -28,7 +28,7 @@ header .navigation {
 }
 header .navigation li {
   list-style: none;
-  margin-left: 0, 10px;
+  margin-left: 0, 9px;
 }
 header .navigation li a {
   color: #fff;
@@ -42,7 +42,7 @@ header .navigation li:hover a {
 }
 header .search {
   position: relative;
-  width: 300px;
+  width: 380px;
   height: 40px;
 }
 header .search input {
@@ -51,7 +51,7 @@ header .search input {
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 0 5%;
+  padding: 0 5px;
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 3px;
   outline: none;
@@ -125,12 +125,125 @@ header .search input::placeholder {
   border-radius: 10%;
   font-style: normal;
 }
+.banner .content p {
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.5em;
+  margin: 10px 0;
+  color: rgba(255, 255, 255, 0.5);
+}
+.banner .content .buttons {
+  position: relative;
+  margin-top: 20px;
+  display: flex;
+}
+.banner .content .buttons a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background: #de0611;
+  padding: 7px 22px;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+}
+.banner .content .buttons a:hover {
+  background: transparent;
+  border: 1px solid #de0611;
+}
+.banner .content .buttons a:nth-child(2) {
+  background: transparent;
+  -webkit-backdrop-filter: blur(80px);
+          backdrop-filter: blur(80px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+.banner .content .buttons a:nth-child(2):hover {
+  background: #de0611;
+}
+.banner .content .play {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  width: 50px;
+  height: 50px;
+  background: #de0611;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.banner .content .play:hover {
+  background: transparent;
+  border: 1px solid #de0611;
+}
+.banner .content .play i {
+  font-size: 1.2em;
+  color: #fff;
+}
+.banner .play {
+  position: absolute;
+  bottom: 50px;
+  left: 100px;
+  display: inline-flex;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+.banner .play img {
+  margin-right: 10px;
+  max-width: 55px;
+}
 
+@media (max-width: 991px) {
+  header {
+    padding: 20px 50px;
+    flex-direction: column;
+  }
+  header .navigation {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px 0;
+  }
+  .banner {
+    padding: 100px 50px;
+  }
+  .banner .play {
+    left: 50px;
+    font-size: 1em;
+  }
+  .banner .play img {
+    margin-right: 10px;
+    max-width: 45px;
+  }
+}
 @media (max-width: 600px) {
   header {
     padding: 20px;
   }
   .search {
-    width: calc(100% - 20px);
+    position: relative;
+    width: calc(100% - 40px);
+    height: 40px;
+  }
+  .banner {
+    padding: 220px 20px 120px;
+  }
+  .banner .play {
+    left: 20px;
+    font-size: 1em;
+    bottom: 30px;
   }
 }/*# sourceMappingURL=styles.css.map */
