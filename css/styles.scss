@@ -229,6 +229,40 @@ header{
     }
   }
 }
+.trailer{
+  display: flex;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(25px);
+  visibility: hidden;
+  opacity: 0;
+  &.active{
+    visibility: visible;
+    opacity: 1;
+  }
+  video{
+    max-width: 900px;
+    outline: none;
+    border-radius: 2%;
+    box-shadow: 5px 5px 10px 5px rgba(95, 26, 26, 0.3);
+  }
+  .close{
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    cursor: pointer;
+    filter: invert(1);
+    max-width: 35px;
+  }
+
+}
 @media (max-width: 991px){
   header{
     padding: 20px 50px;
@@ -250,6 +284,9 @@ header{
         max-width: 45px;
       }
     }
+  }
+  .trailer video{
+      max-width: 95%;
   }
 }
 @media (max-width: 600px){
